@@ -7,7 +7,7 @@ module.exports.rank = (event, context, callback) => {
 
     const rank = event.queryStringParameters.rank;
 
-    const rankEmoji = emojis[rank > emojis.length ? emojis.length - 1 : rank];
+    const rankEmoji = emojis[rank >= emojis.length ? emojis.length - 1 : rank];
 
     const response = {
         statusCode: 200,
